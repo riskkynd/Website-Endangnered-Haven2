@@ -1,0 +1,153 @@
+// Highlight menu saat bagian tertentu discroll
+document.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section, footer");
+    const navLinks = document.querySelectorAll("nav a");
+  
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        const activeLink = document.querySelector(`nav a[href="#${section.id}"]`);
+        if (activeLink) activeLink.classList.add("active");
+      }
+    });
+  });
+
+  // Menampilkan deskripsi saat gambar diklik
+function showDescription(nextHEWAN) {
+  console.log("Menampilkan deskripsi untuk:", nextHEWAN);
+
+  // Sembunyikan semua deskripsi hewan
+  const descriptions = document.querySelectorAll(".artikel-HEWAN");
+  descriptions.forEach((desc) => (desc.style.display = "none"));
+
+  // Tampilkan deskripsi yang sesuai
+  const targetDescription = document.getElementById(nextHEWAN);
+  if (targetDescription) {
+    targetDescription.style.display = "block";
+    targetDescription.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    console.error("❌ Tidak ditemukan ID:", nextHEWAN);
+  }
+}
+
+// Fungsi menavigasi ke deskripsi hewan berikutnya
+function nextHEWAN(currentHEWAN, nextHEWAN) {
+  console.log("Navigasi dari:", currentHEWAN, "ke:", nextHEWAN);
+
+  // Ambil elemen yang sesuai dengan ID
+  const currentDescription = document.getElementById(currentHEWAN);
+  const nextDescription = document.getElementById(nextHEWAN);
+
+  if (!currentDescription) {
+    console.error(`❌ Tidak ditemukan ID: ${currentHEWAN}`);
+    return;
+  }
+  if (!nextDescription) {
+    console.error(`❌ Tidak ditemukan ID: ${nextHEWAN}`);
+    return;
+  }
+
+  // Sembunyikan deskripsi saat ini
+  currentDescription.style.display = "none";
+
+  // Tampilkan deskripsi berikutnya
+  nextDescription.style.display = "block";
+  nextDescription.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+    // Scroll ke yang baru
+    // nextDescription.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    console.log("✅ Navigasi berhasil!");
+
+  
+  
+  // View More buat memperluas konten
+  const viewMoreBtn = document.getElementById("view-more-btn");
+  viewMoreBtn?.addEventListener("click", function () {
+    const gallery = document.getElementById("populer");
+    console.log("test");
+    if (gallery) {
+      gallery.style.display = gallery.style.display === "none" ? "flex" : "none";
+      viewMoreBtn.textContent = gallery.style.display === "none" ? "Hide Gallery" : "View More";
+      gallery.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+  
+  function showDescription(hewanId) {
+    console.log("Function showDescription called with hewanId:", hewanId); // Log awal
+    const descriptions = document.querySelectorAll(".artikel-HEWAN");
+    console.log("Found descriptions:", descriptions); // Log elemen deskripsi yang ditemukan
+  
+    descriptions.forEach((desc) => {
+      console.log("Hiding description:", desc); // Log saat menyembunyikan deskripsi
+      desc.style.display = "none";
+    });
+  
+    const targetDescription = document.getElementById(hewanId);
+    if (targetDescription) {
+      console.log("Showing target description:", targetDescription); // Log saat menampilkan deskripsi target
+      targetDescription.style.display = "block";
+      targetDescription.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      console.error("Target description not found for ID:", hewanId); // Log error jika elemen tidak ditemukan
+    }
+  }
+  
+  function nextHEWAN(currentHEWAN, nextHEWAN) {
+    console.log("Navigasi dari:", currentHEWAN, "ke:", nextHEWAN);
+  
+    // Ambil elemen yang sesuai dengan ID
+    const currentDescription = document.getElementById(currentHEWAN);
+    const nextDescription = document.getElementById(nextHEWAN);
+  
+    if (!currentDescription) {
+      console.error(`❌ Tidak ditemukan ID: ${currentHEWAN}`);
+      return;
+    }
+    if (!nextDescription) {
+      console.error(`❌ Tidak ditemukan ID: ${nextHEWAN}`);
+      return;
+    }
+  
+    // Sembunyikan deskripsi saat ini
+    currentDescription.style.display = "none";
+  
+    // Tampilkan deskripsi berikutnya
+    nextDescription.style.display = "block";
+    nextDescription.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  
+    
+  // Validasi form email
+  const form = document.querySelector("footer form");
+  form?.addEventListener("submit", function (event) {
+    const emailInput = form.querySelector("input[type=email]");
+    const emailValue = emailInput?.value;
+    if (!emailValue || !emailValue.includes("@")) {
+      alert("Please enter a valid email address!");
+      event.preventDefault();
+    }
+  });
+  
+  // scroll otomatis pada tombol tertentu
+  function scrollToSection(buttonId, sectionId) {
+    document.getElementById(buttonId)?.addEventListener("click", function (e) {
+        e.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.style.display = "block";
+            section.style.opacity = "1";
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+  }
+  
+  scrollToSection("explore-btn", "mount-content");
+  scrollToSection("populer-btn", "mount-content");
+
+  
+  
+  
+  

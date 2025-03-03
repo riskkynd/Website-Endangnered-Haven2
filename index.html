@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endangnered of Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+</head>
+<body class="container">
+
+
+    <header>
+        <!-- Button untuk Scroll Ke Atas -->
+        <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">⬆</button>
+        <nav class="navbar">
+            <h1>Endangnered Haven</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#populer">Populer</a></li>
+                <li><a href="#next-btn">Explore</a></li>
+                <li><a href="#footer">About</a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Bagian Hero -->
+        <section id="home" class="hero"> 
+            <div class="main-box">
+                <h1>Welcome to Endangnered Haven</h1>
+                <h2>"They Need Us, We Need Them"</h2>
+                <p class="description">Four endangered animals—tigers, orangutans, eagles, and rhinos—face serious threats such as deforestation, poaching, and climate change. Their survival is increasingly threatened, but we can be their voice. Find information and ways to contribute to efforts to protect endangered animals</p>
+                <!-- Bagian View More -->
+                <section class="view-more-section">
+                    <button id="view-more-btn" class="view-more-btn">Let's Go</button>
+                </section>
+                
+            </div>
+        </section>
+
+        <!--Gambar 4 HEWAN  KOTAK FLEXBOX-->
+        <section id="populer" class="gallery">
+            <figure class="image-item" onclick="showDescription('MACAN')">
+              <img src="Harimau.jpeg" alt="Harimau Sumatra">
+              <figcaption><h2>Sumatran Tiger</h2></figcaption>
+            </figure>
+            <figure class="image-item" onclick="showDescription('ORANGUTAN')">
+              <img src="OrangUtan.jpeg" alt="OrangUtan">
+              <figcaption><h2>Orang Utan</h2></figcaption>
+            </figure>
+            <figure class="image-item" onclick="showDescription('BADAKLEE')">
+              <img src="Badak-Bercula-Satu.jpeg" alt="Badak-JAWA">
+              <figcaption><h2>One horned rhinoceros</h2></figcaption>
+            </figure>
+            <figure class="image-item" onclick="showDescription('ELANGLEE')">
+              <img src="Elang_jawa.jpeg" alt="Elang-jawa">
+              <figcaption><h2>Javanese Eagle</h2></figcaption>
+            </figure>
+          </section> 
+  
+
+        <!-- Deskripsi HEWAN -->
+        <aside id="next-btn">
+            <article id="MACAN" class="artikel-HEWAN">
+                
+                <h2>Sumatran Tiger</h2>
+                <img src="Harimau.jpeg" alt="Harimau Sumatra">
+                <p>The Sumatran tiger (Panthera tigris sumatrae) is a subspecies of tiger found only on the island of Sumatra, Indonesia. It is the smallest tiger compared to other subspecies, with a characteristic darker coat and tighter stripes. Sumatran tigers are critically endangered due to deforestation and poaching. Currently, their population is estimated to only be around 400-600 left in the wild.</p>
+                <button class="next-btn" onclick="nextHEWAN('MACAN', 'ORANGUTAN')">Next </button>
+
+            </article>
+            <article id="ORANGUTAN" class="artikel-HEWAN">
+                <h2>Orang Utan</h2>
+                <img src="OrangUtan.jpeg" alt="OrangUtan">
+                <p>Orangutans are large primates found only in the rainforests of Sumatra and Kalimantan. They are known as one of the most intelligent great ape species, with the ability to use tools and have complex social relationships. Orangutans spend most of their lives in trees and have long arms to help them move from branch to branch. Unfortunately, their habitat continues to decrease due to illegal logging and oil palm plantations.</p>
+                <button class="next-btn" onclick="nextHEWAN('ORANGUTAN', 'BADAKLEE')">Next </button>
+            </article>
+            
+            <article id="BADAKLEE" class="artikel-HEWAN">
+                <h2>One horned rhinoceros</h2>
+                <img src="Badak-Bercula-Satu.jpeg" alt="Badak-JAWA">
+                <p>The One horned rhinoceros (Rhinoceros sondaicus) is one of the rarest mammals in the world. Currently, they are only found in Ujung Kulon National Park, Indonesia. This rhino has thick gray skin with an armor-like pattern and only one small horn which is smaller than other rhino species. The population is in critical condition, with less than 100 left in the wild.</p>
+                <button class="next-btn" onclick="nextHEWAN('BADAKLEE', 'ELANGLEE')">Next </button>
+            </article>
+            
+            <article id="ELANGLEE" class="artikel-HEWAN">
+                <h2>Javanese Eagle</h2>
+                <img src="Elang_jawa.jpeg" alt="Elang-jawa">
+                <p>The Javanese eagle (Nisaetus bartelsi) is a bird of prey that is considered a national symbol of Indonesia. This bird is medium in size with wide wings, a long tail and a distinctive crest on its head. They live in the mountain forests of Java Island and are a symbol of Garuda in Indonesian culture. However, their existence is increasingly threatened due to deforestation and illegal hunting.</p>
+                <button class="next-btn" onclick="nextHEWAN('ELANGLEE', 'MACAN')">Next </button>
+            </article>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="about-section">
+            <!-- Logo -->
+            <div class="H2-LOGO">
+                <a href="index.html">
+             <h2>TamaDep</h2>
+                </a>
+            </div>
+            <div class="footer-about">
+                <h3>About Us</h3>
+            </div>
+            <h2>Endangnered Haven<i class="HEWAN"></i> </h2>
+        </div>
+        <h3> Endangnered Haven literally means "Sanctuary for the Endangered." This term usually refers to a place or initiative dedicated to protecting endangered animal or plant species.
+
+            The concept is to create a "haven" or safe place where threatened living creatures can live, reproduce, and be protected from external threats such as poaching, habitat loss, and climate change.
+            
+            If the context is in your website or project, perhaps Endangered Haven could mean an educational platform that provides information about endangered species and ways to help protect them.</h3>
+
+
+        <ul class="socials">
+            <li><a href="#" title="Facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" title="Twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" title="Google Plus" aria-label="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#" title="YouTube" aria-label="YouTube"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+        
+        
+
+
+
+
+        <div class="footer-contact">
+            <p>Email: TamDep123gmail.com</p>
+            <p>Phone: +62 812 3456 7890</p>
+            <p>Address: Caturharjo, Pandak, Bantul, Yogyakarta</p>
+        </div>
+        <div class="footer-newsletter">
+            <p>Subscribe to our newsletter:</p>
+            <form>
+                <input type="email" placeholder="Your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. ByTamaDep. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll untuk tombol
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+</script>
+
+<script src="JavaScript,js"></script>
+</body>
+</html>
+

@@ -1,0 +1,675 @@
+/* font dasar dan margin/padding */
+body {
+    font-family: "Quicksand", serif;
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    background-image: url(Hutan.jpg);
+    background-size: cover;
+    box-shadow: 15px;
+    border-radius: 5px;
+    background-attachment: fixed; /* Background tetap di tempat */
+    background-size: cover;
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    background-position: center; /* Fokus ke tengah gambar */
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: auto;
+      
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6); /* Transparent effect */
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    .navbar h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      z-index: 2; /* Make sure it stays above overlay */
+      padding-left: 15px;
+    }
+    
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+    }
+    
+    .navbar ul li {
+      margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      width: 3rem;
+    }
+    
+    .navbar ul li a:hover {
+      color: greenyellow; /* Accent color */
+    }
+  
+    
+    
+    
+    
+    /* Bagian Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10%;
+      color: white;
+      background: url('') no-repeat center center/cover;
+      height: 30em;
+  }
+  
+  .hero .text-content {
+      max-width: 50%;
+  }
+  
+  .hero h1 {
+      font-size: 4rem;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding-top: 70px;
+  }
+  
+  .hero h2 {
+      font-size: 2.5rem;
+      color: black;
+      margin-bottom: 15px;
+  }
+  h2{ /* TAMPILAN TULISAN 4 GAMBAR KECIL */ 
+    font-size: 1.9rem;
+    font-display: bold;
+  }
+  
+  .hero .subtitle {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: white;
+      margin-bottom: 20px;
+  }
+  
+  .hero .description {
+      font-size: 1.3rem;
+      color: white;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 30px;
+  }
+  
+  .hero .button {
+      background-color: #28a745;
+      color: white;
+      padding: 20px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+  }
+  
+  .hero .button:hover {
+      background-color: #218838;
+  }
+  
+  .hero .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .hero .image-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+  }
+  
+    
+    /* Galeri Gambar hehe */
+    .image-gallery {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      box-shadow: 15px;
+    }
+    
+    .gallery-item {
+      text-align: center;
+      flex: 1;
+      margin: 0 10px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+    }
+    
+    
+    /* Gaya tombol View More */
+    .view-more-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 2rem;
+      width: 16rem;
+      height: 5rem;
+      text-align: center;
+    }
+    
+    .view-more-btn:hover {
+      background-color: #45a049;
+    }
+    
+    /* Gaya tombol Next HEWAN */
+    .Next-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .Next-button:hover {
+      background-color: #45a049;
+    }
+    
+    /* Gaya gambar 4  KOTAK KECIL2 */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding-top: 130px;
+      flex-wrap: wrap;  
+      color:white;
+    }
+    
+    .image-item {
+      text-align: center;
+      margin: 10px;
+      cursor: pointer;
+    }
+    
+    .image-item img {
+      width: 350px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .image-item img:hover {
+      transform: scale(1.1);
+    }
+    
+    h3{
+      font-size: 1.8rem;
+    }
+    
+    
+  
+    
+    .artikel-HEWAN h2 {
+      font-size: 2.5rem;
+      color: black;
+      margin-bottom: 0.5em;
+    }
+    .artikel-HEWAN p{ /* KESATU*/
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .artikel-HEWAN p { /* KEDUA*/
+      line-height: 1.5; /* Adjust line height for readability */
+      margin-bottom: 1em; /* Space between paragraphs */
+      font-size: 1.8rem; /* Ukuran font untuk paragraf */
+      color: white; /* Warna teks */
+    }
+    
+    .artikel-HEWAN button {
+      background-color: #28a745; /* Warna hijau untuk tombol */
+      color: white;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 2.5rem;
+      margin-right: auto;
+      display: flex;
+      height: 5rem;
+      width: 16rem;
+      border-radius: 5px;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .artikel-HEWAN button:hover {
+      background-color: #218838; /* Warna hover untuk tombol */
+    }
+    
+    .explore-btn { /*Tombol explore */
+      background-color: #4CAF50; /* warna backround nya hijau */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .explore-btn:hover {
+      background-color: #45a049;
+    }
+    .populer-btn{ /* tombol populer */
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .populer-btn:hover{
+      background-color: #4CAF50;
+    }
+    
+    html { /*Fungsi smooth*/
+      scroll-behavior: smooth;
+    }
+    
+    /* deskripsi gunung dengan kelas 'show' */
+    .HEWAN-description.show {
+      display: block;
+    }
+    .next-btn { /*Tombol next */
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .next-btn:hover {
+      background-color: #45a049;
+    }
+    /* gambar-gambar gunung kecil menggunakan Flexbox */
+    #gallery {
+      display: flex; /* Menyusun konten dalam baris secara fleksibe l */
+      justify-content: space-around; /* Memberikan jarak rata antara gambar */
+      align-items: center; /* Menyusun gambar di tengah secara vertikal */
+      flex-wrap: wrap;
+      box-shadow: 15px;
+    }
+    
+    #gallery img { 
+      width: 20%; /* Menentukan lebar gambar agar proporsional */
+      margin: 10px; /* jarak antar gambar */
+      border-radius: 10px; /* Memberikan sudut gambar yang lembut */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery img {
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+  
+    
+    /* Gaya deskripsi gunung KOTAK 2*/
+    .artikel-HEWAN {
+      display: flex;
+      grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position:sticky;
+      background-color: transparent;
+      font-family:  "Quicksand", serif;
+      padding: 90px;
+      padding-bottom: 50px;
+      padding-top: 155px;
+      display: flex;
+      justify-content:space-around;
+      margin-top: 2em;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 700px;
+      margin: 2em auto; /* Pusatkan elemen */
+      border-radius: 10px; /* Tambahkan border-radius untuk estetika */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+      overflow: hidden;
+    
+    }
+    
+    .artikel-HEWAN img {
+      width: 50%; /* Menentukan lebar gambar */
+      border-radius: 10px; /* Menambahkan sudut lembut */
+      text-align: right;
+      display: block;
+      transition: transform 0.3s ease;
+      height: auto;
+      margin-right: 20px;
+    
+    } 
+
+    #BADAKLEE {
+
+      display: flex;
+      align-items: flex-end;
+    }
+
+
+    #ORANGUTAN {
+      display: block;
+    }
+
+    /*BARU*/
+     .artikel-HEWAN img {
+      max-width: 100%; /* Agar gambar tidak melampaui ukuran kontainer */
+      height: auto; /* Untuk menjaga rasio gambar */
+      border-radius: 10px; /* Opsional, untuk estetika */
+      margin-right: 20px;
+    }
+    
+    .artikel-HEWAN:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    .artikel-HEWAN:hover img {
+      transform: scale(1.1);
+    }
+    
+    
+    .artikel-HEWAN.show {
+      flex-direction: row; /* Biar konten sejajar ke samping */
+      align-items: center; /* Pusatkan elemen secara vertikal */
+      text-align: left;
+  }
+  
+  /* Buat responsif di layar kecil */
+      .artikel-HEWAN {
+          flex-direction: column; /* Balik ke vertikal di layar kecil */
+          text-align: justify;
+      }
+  
+      .artikel-HEWAN img {
+          margin-right: 0;
+          margin-bottom: 20px;
+      }
+
+  
+    
+    
+    
+    .description {
+       text-align:justify;
+       margin: 10px 0;
+    }
+    #scrollToTopBtn {
+      display: block; /* Pastikan tombol terlihat saat kondisi terpenuhi */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: forestgreen;
+        color: white;
+        border: none;
+        border-radius: 10%;
+        cursor: pointer;
+        font-size: 1.5rem;    
+    }
+    
+    #scrollToTopBtn:hover {
+      background-color: #555; /* Warna tombol saat di hover */
+    }
+    footer {
+      background-color: #1a1a1a;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 40px 20px; 
+      color: white; 
+      padding: 20px 60px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 10rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .H2-LOGO {
+      position: relative;
+      top: 10px;
+      left: 30px;
+      padding: 10px;
+      width: 60px;
+      height: 60px;
+      display: flex; /* Gunakan flexbox untuk penjajaran tengah */
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    
+    }
+
+    
+    footer p, a {
+      color: #fff; /* Tautan warna putih */
+      left: 30px;
+      text-decoration: none;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 1.3em;
+      text-decoration: none;
+      margin: 5px 0;
+      text-align: center;
+    }
+    
+    footer a:hover {
+      color: #09f034; /* Warna hover (Hijau) */
+    }
+    
+    footer .footer-logo h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    footer .footer-nav a {
+      display: inline-block;
+      margin: 5px 15px;
+    }
+    
+    .socials{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0 3rem ;
+      padding-left: 1rem;
+  }
+  .socials li{
+      margin: 0 10px;
+  }
+  .socials a{
+      text-decoration: none;
+      color: #fff;
+      border: 1.1px solid white;
+      padding: 15px;
+      border-radius: 50%;
+  }
+  .socials a i{
+      font-size: 1.1rem;
+      width: 20px;
+      transition: color .4s ease;
+  }
+  .socials a:hover i{
+      color: #09f034;
+  }
+
+
+  
+
+
+
+    footer .footer-contact p {
+      margin: 5px 0;
+    }
+    
+    footer .footer-newsletter input {
+      padding: 10px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    footer .footer-newsletter button {
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    footer .footer-newsletter button:hover {
+      background-color: #555;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .populer-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Styling logo footer */
+    .footer-logo img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    #footer-logo {
+      width: 1000px;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    /* Responsif untuk logo */
+    #footer-logo {
+      max-width: 100%;
+      height: 320px;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .footer-about,
+    .footer-links,
+    .footer-contact,
+    .footer-social,
+    .footer-subscribe {
+      text-align: left;
+    }
+    
+    .FOOTER-MENU {
+      float: right;
+    }
+    
+    .FOOTER-MENU ul{
+      display: flex;
+    }
+    
+    .FOOTER-MENU ul li{
+    padding-right: 10px;
+    display: block;
+    }
+    
+    .FOOTER-MENU ul li a{
+      color: #cfd2d6;
+      text-decoration: none;
+    }
+    
+    .footer-menu ul li a:hover{
+      color: #27bcda;
+    }
+    
+    .footer-subscribe input {
+      padding: 8px;
+      margin: 10px 0;
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .footer-subscribe button {
+      padding: 8px 12px;
+      background-color: #f0db4f;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .footer-bottom {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+    
